@@ -26,10 +26,10 @@ docker run -itd <docker_image_name>
 
 You can also build docker image without pass `API_TOKEN` and `ROUTER_IP` environment variables but use it with `docker run` option< for example:
 ```
-docker run -itd <docker_image_name> \
-           --name <container_name> \
-           --build-arg API_TOKEN=<your_api_token> \
-           --build-arg ROUTER_IP=<destination_ip_address>
+docker run --name <container_name> \
+           --env API_TOKEN=<your_api_token> \
+           --env ROUTER_IP=<destination_ip_address> \
+           -itd <docker_image_name>
 ```
 
 When all configurations is done and bot us up you can check it by taping `/start` command in your telegram bot.
