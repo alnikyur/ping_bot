@@ -1,0 +1,13 @@
+[Unit]
+Description="Python telegram ping bot"
+
+[Service]
+User=root
+WorkingDirectory=/opt/ping_bot/
+ExecStart=/usr/bin/python3 bot.py >> /var/log/echobot/ping_bot.log
+Restart=always
+StandardOutput=append:/var/log/ping_bot/ping_bot.log
+StandardError=append:/var/log/ping_bot/ping_bot.log
+
+[Install]
+WantedBy=multi-user.target

@@ -8,7 +8,7 @@ ENV ROUTER_IP=${ROUTER_IP}
 
 WORKDIR /usr/src/app/
 
-COPY . .
+COPY ./src/ ./
 RUN apk add linux-headers libc-dev --no-cache
 RUN apk add --no-cache py3-psutil gcc && \
     pip3 install -r requirements.txt

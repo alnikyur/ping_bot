@@ -16,7 +16,8 @@ Also you can run it on baremetal, raspberry-pi or anywere you want.
 ```
 docker build -t <container_name> \ 
              --build-arg API_TOKEN=<your_api_token> \
-             --build-arg ROUTER_IP=<destination_ip_address> .
+             --build-arg ROUTER_IP=<destination_ip_address> \
+	     -f docker/Dockerfile .
 ```
 
 3. Run your docker image:
