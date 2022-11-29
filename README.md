@@ -1,5 +1,7 @@
 # Ping bot
 
+<img src="https://www.northernsun.com/images/image16x16/576x576/0438.png" alt="MarineGEO circle logo" style="height: 100; width:100px;"/>
+
 [Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo
 
 This tlegram bot can be useful to check status of any device through IPv4 protocol.  
