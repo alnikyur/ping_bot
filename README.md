@@ -1,5 +1,7 @@
 # Ping bot
 
+[Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo
+
 This tlegram bot can be useful to check status of any device through IPv4 protocol.  
 For example, You can use this bot to check status of electricity in your home/office.
 
