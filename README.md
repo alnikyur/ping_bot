@@ -1,5 +1,7 @@
 # Ping bot
-![stop_wat](./img/stop_war.webp)
+<p align="center">
+<img width="200" height="200" src="https://raw.githubusercontent.com/alnikyur/ping_bot/main/img/img.png">
+<p/>
 
 [Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo  
 
