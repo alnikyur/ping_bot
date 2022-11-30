@@ -1,5 +1,5 @@
 # Ping bot
-<img src="file://./img/stop_war.webp" alt="stop_war" height="200" width="200" align="center"/>  
+<img src="file://./img/stop_war.webp" alt="stop_war" height="200" width="200"/>  
 
 [Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo  
 
