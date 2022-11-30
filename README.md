@@ -16,8 +16,10 @@ Also you can run it on baremetal, raspberry-pi or anywere you want.
 
 ## How to using bot
 
-1. First of all you have to ger `API_TOKEN` from telegram api. Please use [official documentaion](https://telegra.ph/Awesome-Telegram-Bot-11-11) to get `API_TOKEN`.
-2. Build docker container:  
+1. First of all you have to ger `API_TOKEN` from telegram api. Please use [official documentaion](https://core.telegram.org/bots/faq#how-do-i-create-a-bot) to get `API_TOKEN`.
+2. If you want to check availability of your home/office router the last one should have static IP address.  
+Or you can use `DynamicDNS` service or any other dyndns-like services. In this case you have to use your `FQDN` record in `REMOTE_IP` variable instead IP address.
+3. Build docker container:  
 ```
 docker build -t <container_name> \
              --build-arg API_TOKEN=<your_api_token> \
