@@ -2,7 +2,8 @@
 
 <img src="https://www.northernsun.com/images/image16x16/576x576/0438.png" alt="MarineGEO circle logo" style="height: 100; width:100px;"/>
 
-[Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo
+[Link to Git-hub](https://github.com/alnikyur/ping_bot) of this repo  
+![title](./img/stop_war.webp)
 
 This tlegram bot can be useful to check status of any device through IPv4 protocol.  
 For example, You can use this bot to check status of electricity in your home/office.
@@ -44,4 +45,3 @@ docker run --name <container_name> \
 ```
 
 When all configurations is done and bot us up you can check it by taping `/start` command in your telegram bot.
-
