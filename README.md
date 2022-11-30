@@ -16,7 +16,7 @@ Also you can run it on baremetal, raspberry-pi or anywere you want.
 
 ## Docker-hub
 
-You can download docker image from [official docker-ub repo](https://hub.docker.com/r/alnikyur/ping_bot) and use it without building.  
+You can download docker image from [official docker-hub repo](https://hub.docker.com/r/alnikyur/ping_bot) and use it without building.  
 Use next command to pull docker image:  
 ```
 docker pull alnikyur/ping_bot:latest
