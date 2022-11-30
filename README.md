@@ -14,6 +14,14 @@ You have to run this bot on 24/7 environment with full access to internet networ
 For example you can use `AWS cloud` EC2 machine or `Hetzner` dedicated servers to run this bot.  
 Also you can run it on baremetal, raspberry-pi or anywere you want.  
 
+## Docker-hub
+
+You can download docker image from [official docker-ub repo](https://hub.docker.com/r/alnikyur/ping_bot) and use it without building.  
+Use next command to pull docker image:  
+```
+docker pull alnikyur/ping_bot:latest
+```
+
 ## How to using bot
 
 1. First of all you have to ger `API_TOKEN` from telegram api. Please use [official documentaion](https://core.telegram.org/bots/faq#how-do-i-create-a-bot) to get `API_TOKEN`.

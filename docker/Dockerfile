@@ -9,8 +9,8 @@ ENV REMOTE_IP=${REMOTE_IP}
 WORKDIR /usr/src/app/
 
 COPY ./src/ ./
-RUN apk add linux-headers libc-dev --no-cache
-RUN apk add --no-cache py3-psutil gcc && \
-    pip3 install -r requirements.txt
+RUN apk add --no-cache linux-headers libc-dev \
+ && py3-psutil gcc \
+ && pip3 install -r requirements.txt
 
 CMD [ "python3", "bot.py" ]
