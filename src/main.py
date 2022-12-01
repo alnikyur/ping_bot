@@ -5,8 +5,8 @@ import telebot
 from telebot import types
 import time
 
-API_TOKEN="5535550610:AAErrMycyTPXWmTCuM4u_wHsXrU1qAWwlxo"
-REMOTE_IP="127.0.0.1"
+API_TOKEN=os.environ['API_TOKEN']
+REMOTE_IP=os.environ['REMOTE_IP']
 
 bot = telebot.TeleBot(API_TOKEN)
 

@@ -13,4 +13,4 @@ RUN apk add --no-cache linux-headers libc-dev \
     py3-psutil gcc \
  && pip3 install -r requirements.txt
 
-CMD [ "python3", "bot.py" ]
+CMD [ "python3", "main.py" ]
