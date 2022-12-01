@@ -10,7 +10,7 @@ WORKDIR /usr/src/app/
 
 COPY ./src/ ./
 RUN apk add --no-cache linux-headers libc-dev \
- && py3-psutil gcc \
+    py3-psutil gcc \
  && pip3 install -r requirements.txt
 
 CMD [ "python3", "bot.py" ]
