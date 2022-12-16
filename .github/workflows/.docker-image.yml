@@ -15,9 +15,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
-      run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
+#      run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
 
- # docker_test:
- #   - uses: actions/checkout@v3
- #   - name: Test docker image
- #     run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
+  docker_test:
+    - name: Test docker image
+      run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
