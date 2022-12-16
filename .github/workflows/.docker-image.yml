@@ -18,3 +18,15 @@ jobs:
 
     - name: Test dockerfile
       run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
+
+  docker_test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Testing image
+      run: echo "Test"
+
+    - name: Test securing
+      run: docker images
