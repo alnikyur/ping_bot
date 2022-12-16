@@ -16,7 +16,7 @@ jobs:
 #    - name: Build the Docker image
     - run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
     - run: docker save alnikyur/ping_bot:latest -o /tmp/ping_bot.tar
-    - uses: actions/upload-artifact@develop
+    - uses: actions/upload-artifact@v3
       with:
         name: ping_bot_test
         path: /tmp/ping_bot.tar
@@ -32,7 +32,7 @@ jobs:
  #   - name: Testing image
     - run: echo "Test"
 
-    - uses: actions/download-artifact@develop
+    - uses: actions/download-artifact@v3
       with:
         name: ping_bot_test
         path: /tmp/ping_bot.tar
