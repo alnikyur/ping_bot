@@ -14,8 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
-
+    - run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
+    - run: docker save alnikyur/ping_bot:latest -o /tmp/ping_bot.tar
+    - uses: actions/upload-artifact@develop
+      with:
+        name: ping_bot_test
+        path: /tmp/ping_bot.tar
     - name: Test dockerfile
       run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
 
@@ -26,7 +30,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Testing image
-      run: echo "Test"
+    - run: echo "Test"
+
+    - uses: actions/download-artifact@develop
+      with:
+        name: ping_bot_test
+        path: /tmp/ping_bot.tar
 
     - name: Test securing
-      run: docker images
+    - run: ls -la /tmp/
