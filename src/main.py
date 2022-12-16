@@ -33,10 +33,11 @@ Bots
     bot.send_message(message.chat.id, msg)
 
 def ping_():
-    ret = os.system('ping -c 4 -t 3 -n -q {} > /dev/null'.format(REMOTE_IP))
+    ret = os.system('ping -c 4 -n -q ' + REMOTE_IP)
     if ret == 0:
-        return "The power is UP"
-    return "The power is DOWN"
+        return "The power is UP, ip addr is: " + REMOTE_IP
+    else:
+        return "The power is DOWN, ip addr is: " + REMOTE_IP
 
 @bot.message_handler(commands=['ping'])
 def ping(message):

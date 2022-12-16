@@ -14,6 +14,12 @@ You have to run this bot on 24/7 environment with full access to internet networ
 For example you can use `AWS cloud` EC2 machine or `Hetzner` dedicated servers to run this bot.  
 Also you can run it on baremetal, raspberry-pi or anywere you want.  
 
+## Configuration  
+
+You can use `make` commands to simply build and running python bot app.
+Please see `Makefile` for more information.
+You can use config file with make commands, just rename `config.env.example` to `config.env` and add your `API_TOKEN` and `REMOTE_IP` variables to this file.
+
 ## Docker-hub
 
 You can download docker image from [official docker-hub repo](https://hub.docker.com/r/alnikyur/ping_bot) and use it without building.  
