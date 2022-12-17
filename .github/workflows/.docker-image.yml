@@ -14,12 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile . && \
-           mkdir -p /opt/artifact/
-           
+      run: docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
     - name: Upload artifacts
       run: docker save alnikyur/ping_bot:latest -o /opt/artifact/ping_bot.tar
-
+      run: echo "test"
 #    - run: mkdir -p /opt/artifact/
 #    - run: docker save alnikyur/ping_bot:latest -o /opt/artifact/ping_bot.tar
 
