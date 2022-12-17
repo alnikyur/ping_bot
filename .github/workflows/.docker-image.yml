@@ -20,7 +20,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: ping_bot_test
-        path: /tmp/artifact/
+        path: /opt/artifact/
 #    - name: Test dockerfile
     - run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:latest sh -c "python3 --version"
 
