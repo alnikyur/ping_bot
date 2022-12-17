@@ -18,7 +18,7 @@ jobs:
       run: |
         docker build -t alnikyur/ping_bot:test -f docker/Dockerfile .
         mkdir -p /opt/artifact/
-        docker save alnikyur/ping_bot:latest -o /opt/artifact/ping_bot.tar
+        docker save alnikyur/ping_bot:test -o /opt/artifact/ping_bot.tar
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
