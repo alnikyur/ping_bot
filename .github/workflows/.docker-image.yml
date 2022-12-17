@@ -26,16 +26,16 @@ jobs:
         name: ping_bot_test
         path: /opt/artifact/
 
-  docker_test:
+#  docker_test:
 
-    runs-on: ubuntu-latest
-    needs: docker_build
-    steps:
-    - name: Import images
-    - uses: actions/download-artifact@v3
-      with:
-        name: ping_bot_test
-        path: /opt/artifact/
-      run: docker import /opt/artifact/ping_bot.tar ping_bot:test
-    - name: Run tests
-      run: docker run --rm --name ping_bot_tmp -i ping_bot:test sh -c "python3 --version"
+#    runs-on: ubuntu-latest
+#    needs: docker_build
+#    steps:
+#    - name: Import images
+#    - uses: actions/download-artifact@v3
+#      with:
+#        name: ping_bot_test
+#        path: /opt/artifact/
+#      run: docker import /opt/artifact/ping_bot.tar ping_bot:test
+#    - name: Run tests
+#      run: docker run --rm --name ping_bot_tmp -i ping_bot:test sh -c "python3 --version"
