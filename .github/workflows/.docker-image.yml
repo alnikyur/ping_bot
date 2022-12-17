@@ -36,6 +36,7 @@ jobs:
         name: ping_bot_test
         path: /opt/artifact/
     - name: Import docker images
-      run: docker import /opt/artifact/ping_bot.tar ping_bot:test
+      run: docker load -i /opt/artifact/ping_bot.tar
     - name: Run tests
-      run: docker run --rm --name ping_bot_tmp -i ping_bot:test sh -c "python3 --version"
+      run: docker run --rm --name ping_bot_tmp -i ping_bot:latest sh -c "python3 --version"
+
