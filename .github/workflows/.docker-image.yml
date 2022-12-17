@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v3
     - name: Build docker image
       run: |
-        docker build -t alnikyur/ping_bot:latest -f docker/Dockerfile .
+        docker build -t alnikyur/ping_bot:test -f docker/Dockerfile .
         mkdir -p /opt/artifact/
         docker save alnikyur/ping_bot:latest -o /opt/artifact/ping_bot.tar
     - name: Upload artifacts
@@ -38,5 +38,5 @@ jobs:
     - name: Import docker images
       run: docker load -i /opt/artifact/ping_bot.tar
     - name: Run tests
-      run: docker run --rm --name ping_bot_tmp -i ping_bot:latest sh -c "python3 --version"
+      run: docker run --rm --name ping_bot_tmp -i alnikyur/ping_bot:test sh -c "python3 --version"
 
